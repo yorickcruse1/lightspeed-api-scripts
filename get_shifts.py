@@ -6,10 +6,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-BASE_URL = os.getenv("BASE_URL")
 API_TOKEN = os.getenv("API_TOKEN")
 
-BUSINESS_LOCATION_ID = os.getenv("BUSINESS_LOCATION_ID")
+BASE_URL="https://api.lsk.lightspeed.app"
+BUSINESS_LOCATION_ID=1231959829250050
 # Define your date range here using ISO 8601 format
 START = "2026-01-12T00:00:00Z"
 END = "2026-01-13T00:00:00Z"
@@ -37,7 +37,7 @@ def get_all_shifts(location_id, start_time=None, end_time=None):
         # We add the new filters to the params dictionary
         params = {
             "page": current_page,
-            "size": 50,
+            "size": 100,
             "sort": "date,asc",
             "startTime": start_time,
             "endTime": end_time 
