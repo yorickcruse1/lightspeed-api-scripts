@@ -12,7 +12,7 @@ BASE_URL="https://api.lsk.lightspeed.app"
 BUSINESS_LOCATION_ID=1231959829250050
 # Define your date range here using ISO 8601 format
 START = "2026-01-12T00:00:00Z"
-END = "2026-01-13T00:00:00Z"
+END = "2026-02-04T00:00:00Z"
 
 def get_all_shifts(location_id, start_time=None, end_time=None):
     if not API_TOKEN or not BASE_URL:
